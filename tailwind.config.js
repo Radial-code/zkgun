@@ -24,6 +24,8 @@ module.exports = {
         fireBush: "#E59E2B",
         racingGreen: "#0A140F",
         blackPearl: "#030621",
+        cloudBurst: "#20315A",
+        mirageLight: "#142028",
       },
       fontSize: {
         "custom-sm": "22px",
@@ -48,6 +50,7 @@ module.exports = {
         "doucmentation": "linear-gradient(180deg, rgba(255, 33, 0, 0) -23.62%, #FF2100 55.73%)",
       },
       screens: {
+        "custom-3xs": { max: "345.98px" },
         "custom-2xs": { max: "401.98px" },
         "custom-xs": { max: "374.98px" },
         "custom-sm": { max: "479.98px" },

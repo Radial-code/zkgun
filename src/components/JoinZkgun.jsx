@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactParallaxTilt from "react-parallax-tilt";
 import joinZKlogo from "../assets/images/png/z-logo.png";
-import { DextTools, JoinLeftHexagon, MediumIcon, RightCheck, Telegram, TextCopy, Twitter } from "./common/Icons";
+import { DextTools, EtherIcon, JoinLeftHexagon, MediumIcon, RightCheck, Telegram, TextCopy, Twitter } from "./common/Icons";
 
 const JoinZkgun = () => {
   const [copied, setCopied] = useState(false);
@@ -55,13 +55,13 @@ const JoinZkgun = () => {
         </p>
         <div
           data-aos="fade-zoom-in"
-          className="mt-2 flex justify-center gap-3 w-full"
+          className="mt-2 custom-3xs:gap-3 flex justify-center gap-[22px] sm:gap-3 w-full"
         >
           <a
             rel="noreferrer"
             target="_blank"
             href="https://medium.com/@zkgun"
-            className="py-[15px] px-4 sm:px-8 hover:scale-105 duration-300 rounded-[100px] w-full flex justify-center items-center sm:w-auto bg-white cursor-pointer"
+            className="py-[15px] px-8 hover:scale-105 duration-300 rounded-[100px] w-full flex justify-center items-center sm:w-auto bg-white cursor-pointer"
           >
             <MediumIcon />
           </a>
@@ -69,36 +69,47 @@ const JoinZkgun = () => {
             rel="noreferrer"
             target="_blank"
             href="https://t.me/zkgunproject"
-            className="py-[15px] px-4 sm:px-8 hover:scale-105 duration-300 rounded-[100px] w-full flex justify-center sm:w-auto link_gradient cursor-pointer"
+            className="py-[15px] px-8 hover:scale-105 duration-300 rounded-[100px] w-full flex justify-center sm:w-auto link_gradient cursor-pointer"
           >
             <Telegram />
           </a>
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://www.dextools.io/app/en/ether/pair-explorer/0xd0fcb8bfe5ceff6601c4e09ce1a5b2ba96d0058c?t=1717653019543"
-            className="py-[15px] px-4 sm:px-8 hover:scale-105 duration-300 rounded-[100px] w-full flex justify-center sm:w-auto bg-white cursor-pointer"
+            href="https://twitter.com/zkgunproject"
+            className="py-[15px] px-8 hover:scale-105 duration-300 rounded-[100px] w-full flex justify-center items-center sm:w-auto bg-white cursor-pointer"
           >
-            <DextTools />
+            <Twitter />
+          </a>
+
+        </div>
+
+      </div>
+      <div className="max-w-[1400px] mx-auto px-4 md:px-5 py-[30px]">
+        <div className="flex items-center text-nowrap gap-2 sm:gap-3 justify-center">
+          <p className="text-white text-xs custom-3xs:text-[11px] sm:text-sm md:text-base font-normal font-manrope h-full text-center">CA : 0x6873C95307e13bEB58Fb8FCdDf9a99667655c9e4</p>
+          <button onClick={copyToClipboard} className="flex items-center gap-2">
+            {copied ? <RightCheck /> : <TextCopy />}
+          </button>
+
+        </div>
+        <div className="flex justify-center gap-[22px] sm:gap-3 mt-2">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://etherscan.io/token/0x6873C95307e13bEB58Fb8FCdDf9a99667655c9e4"
+            className="py-[15px] px-8 hover:scale-105 duration-300 rounded-[100px] flex justify-center bg-cloudBurst cursor-pointer"
+          >
+            <EtherIcon />
           </a>
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://twitter.com/zkgunproject"
-            className="py-[15px] px-4 sm:px-8 hover:scale-105 duration-300 rounded-[100px] w-full flex justify-center sm:w-auto link_gradient cursor-pointer"
+            href="https://www.dextools.io/app/en/ether/pair-explorer/0xd0fcb8bfe5ceff6601c4e09ce1a5b2ba96d0058c?t=1717653019543"
+            className="py-[15px] px-8 hover:scale-105 duration-300 rounded-[100px] flex justify-center bg-mirageLight cursor-pointer"
           >
-            <Twitter />
+            <DextTools />
           </a>
-         
-        </div>
-        <div className="flex flex-col sm:flex-row gap-1 sm:justify-center pt-6">
-          <p className="text-white text-base sm:text-sm md:text-base font-normal font-manrope h-full text-center">Contract Address :</p>
-          <div className="flex items-center gap-3 justify-center">
-            <p className="text-white text-opacity-60 text-xs sm:text-sm md:text-base font-normal font-manrope h-full text-center">0x6873C95307e13bEB58Fb8FCdDf9a99667655c9e4</p>
-            <button onClick={copyToClipboard} className="flex items-center gap-2">
-              {copied ? <RightCheck /> : <TextCopy />}
-            </button>
-          </div>
         </div>
       </div>
     </div>
